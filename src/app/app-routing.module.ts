@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'asortyment',
+    loadChildren: () => import('./asortyment/asortyment.module').then( m => m.AsortymentPageModule)
+  },
+  {
+    path: 'mniej-istotne',
+    loadChildren: () => import('./mniej-istotne/mniej-istotne.module').then( m => m.MniejIstotnePageModule)
+  },
+  {
+    path: 'zamowione',
+    loadChildren: () => import('./zamowione/zamowione.module').then( m => m.ZamowionePageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
+  },
 ];
 
 @NgModule({
